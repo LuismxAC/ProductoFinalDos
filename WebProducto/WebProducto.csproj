@@ -67,12 +67,63 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\img.png" />
+    <Content Include="DetallesPed.aspx" />
+    <Content Include="Direccion.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="InicioCar.aspx" />
+    <Content Include="InicioCli.aspx" />
+    <Content Include="js\main.js" />
+    <Content Include="registro-carnicero.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetallesPed.aspx.cs">
+      <DependentUpon>DetallesPed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallesPed.aspx.designer.cs">
+      <DependentUpon>DetallesPed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Direccion.aspx.cs">
+      <DependentUpon>Direccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Direccion.aspx.designer.cs">
+      <DependentUpon>Direccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioCar.aspx.cs">
+      <DependentUpon>InicioCar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioCar.aspx.designer.cs">
+      <DependentUpon>InicioCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioCli.aspx.cs">
+      <DependentUpon>InicioCli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioCli.aspx.designer.cs">
+      <DependentUpon>InicioCli.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registro-carnicero.aspx.cs">
+      <DependentUpon>registro-carnicero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registro-carnicero.aspx.designer.cs">
+      <DependentUpon>registro-carnicero.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\Thumbs.db" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

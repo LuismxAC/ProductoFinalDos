@@ -15,7 +15,7 @@ namespace ClassCapaLogicaNegocios
     {
         private ClassAccesoSQL Objacceso = new ClassAccesoSQL
         (
-            @"Data Source=DESKTOP-H5Q2S4F\MSSQLSERVER01; Initial Catalog=PedidosCarniceria; Integrated Security=true;"
+            @"Data Source=LEOPARDO\SQLEXPRESS; Initial Catalog=PedidosCarniceria; Integrated Security=true;"
         );
         public Boolean InsertaCliente(Cliente nuevo, ref string message, ref string icon, ref string title)
         {

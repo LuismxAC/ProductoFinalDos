@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using ClassCapaEntidades;
 using ClassCapaLogicaNegocios;
+using ClassCapaEntidades;
 
 namespace WebProducto
 {
-    public partial class index : System.Web.UI.Page
+    public partial class registro_carnicero : System.Web.UI.Page
     {
         ClassLogicaCarniceria objLog = null;
         protected void Page_Load(object sender, EventArgs e)
@@ -25,29 +25,28 @@ namespace WebProducto
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Unnamed1_Click(object sender, EventArgs e)
         {
             string m = "", i = "", t = "";
-            Cliente tempC = new Cliente
+            Carnicero tempC = new Carnicero
             {
                 Nombre = txtNombre.Text,
-                ApellP = txtApp.Text,
-                ApellM = txtApm.Text,
-                Celular = txtTel.Text.ToString(),
-                Email = txtEmail.Text
+                Telefono = txtCel.Text.ToString(),
+                Correo = txtCorreo.Text,
+                Experiencia = int.Parse(txtAnios.Text)
             };
-            string[] atrapa = objLog.CompruebaExistenciaCli(tempC, ref m, ref i, ref t);
+            string[] atrapa = objLog.CompruebaExistenciaCarn(tempC, ref m, ref i, ref t);
             if (atrapa != null)
             {
                 Session["Datos"] = atrapa;
             }
             else
             {
-                objLog.InsertaCliente(tempC, ref m, ref i, ref t);
-                string[] temp = objLog.CompruebaExistenciaCli(tempC, ref m, ref i, ref t);
+                objLog.InsertaCarnicero(tempC, ref m, ref i, ref t);
+                string[] temp = objLog.CompruebaExistenciaCarn(tempC, ref m, ref i, ref t);
                 Session["Datos"] = temp;
             }
-            this.ClientScript.RegisterStartupScript(this.GetType(), "msg1", "msgboxr('" + m + "', '" + i + "', '" + t + "', 'InicioCli.aspx')", true);
+            this.ClientScript.RegisterStartupScript(this.GetType(), "msg1", "msgboxr('" + m + "', '" + i + "', '" + t + "', 'InicioCar.aspx')", true);
         }
     }
 }
