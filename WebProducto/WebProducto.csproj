@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cerrar.aspx" />
     <Content Include="css\img.png" />
     <Content Include="DetallesPed.aspx" />
     <Content Include="Direccion.aspx" />
@@ -75,9 +76,18 @@
     <Content Include="InicioCli.aspx" />
     <Content Include="js\main.js" />
     <Content Include="registro-carnicero.aspx" />
+    <Content Include="VerPedidos.aspx" />
+    <Content Include="VerProductos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cerrar.aspx.cs">
+      <DependentUpon>Cerrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cerrar.aspx.designer.cs">
+      <DependentUpon>Cerrar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DetallesPed.aspx.cs">
       <DependentUpon>DetallesPed.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -120,6 +130,20 @@
     </Compile>
     <Compile Include="registro-carnicero.aspx.designer.cs">
       <DependentUpon>registro-carnicero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerPedidos.aspx.cs">
+      <DependentUpon>VerPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerPedidos.aspx.designer.cs">
+      <DependentUpon>VerPedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerProductos.aspx.cs">
+      <DependentUpon>VerProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerProductos.aspx.designer.cs">
+      <DependentUpon>VerProductos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
