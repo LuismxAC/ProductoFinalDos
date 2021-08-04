@@ -49,7 +49,7 @@
 
     </div>
     <div class="col">
-              <asp:Button CssClass="btn btn-primary" runat="server" Text="Pedidos cobró el repartidor" ID="btnPCER" OnClick="btnPCER_Click"/>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Agregar Repartidor" BackColor="#0066FF" ForeColor="White" />
 
     </div>
     <div class="col">

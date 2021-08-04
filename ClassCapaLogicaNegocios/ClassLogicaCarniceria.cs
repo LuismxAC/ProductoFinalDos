@@ -15,7 +15,7 @@ namespace ClassCapaLogicaNegocios
     {
         private ClassAccesoSQL Objacceso = new ClassAccesoSQL
         (
-            @"Data Source=LEOPARDO\SQLEXPRESS; Initial Catalog=PedidosCarniceria; Integrated Security=true;"
+            @"Data Source=DESKTOP-H5Q2S4F\MSSQLSERVER01; Initial Catalog=PedidosCarniceria; Integrated Security=true;"
         );
         public Boolean InsertaCliente(Cliente nuevo, ref string message, ref string icon, ref string title)
         {
@@ -65,6 +65,138 @@ namespace ClassCapaLogicaNegocios
             salida = Objacceso.InsertParametros(sqlInsert, Objacceso.AbrirConexion(ref message, ref icon, ref title), ref message, ref icon, ref title, params1);
             return salida;
         }
+
+        ///REPARTIDORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+        ///
+        public Boolean InsertarRepartidor(RepartidorF nuevo, ref string message, ref string icon, ref string title)
+        {
+            SqlParameter[] params1 = new SqlParameter[3];
+            params1[0] = new SqlParameter
+            {
+                ParameterName = "nombre",
+                SqlDbType = SqlDbType.NVarChar,
+                Direction = ParameterDirection.Input,
+                Size = 200,
+                Value = nuevo.Nombre
+            };
+            params1[1] = new SqlParameter
+            {
+                ParameterName = "celular",
+                SqlDbType = SqlDbType.NVarChar,
+                Direction = ParameterDirection.Input,
+                Size = 20,
+                Value = nuevo.Celular
+            };
+
+            params1[2] = new SqlParameter
+            {
+                ParameterName = "licencia",
+                SqlDbType = SqlDbType.NVarChar,
+                Direction = ParameterDirection.Input,
+                Size = 40,
+                Value = nuevo.licencia
+            };
+           
+            string sqlInsert = "INSERT INTO Repartidor (Nombre, Celular, Licencia) VALUES (@nombre, @celular, @licencia);";
+            Boolean salida = false;
+            salida = Objacceso.InsertParametros(sqlInsert, Objacceso.AbrirConexion(ref message, ref icon, ref title), ref message, ref icon, ref title, params1);
+            return salida;
+        }
+
+        public string[] CompruebaExistenciaRe(RepartidorF cli, ref string m, ref string i, ref string t)
+        {
+            SqlConnection cnxTemp = null;
+            SqlParameter[] pSQL = new SqlParameter[1];
+            pSQL[0] = new SqlParameter
+            {
+                ParameterName = "nombre",
+                SqlDbType = SqlDbType.NVarChar,
+                Direction = ParameterDirection.Input,
+                Size = 200,
+                Value = cli.Nombre
+            };
+            string q1 = "SELECT COUNT(*), Nombre, Celular, Licencia FROM Repartidor WHERE Nombre = @nombre GROUP BY Nombre, Celular, Licencia; ";
+            string[] status = null;
+
+            cnxTemp = Objacceso.AbrirConexion(ref m, ref i, ref t);
+            SqlDataReader atrapa = null;
+            atrapa = Objacceso.ConsultaDRP(q1, cnxTemp, ref m, ref i, ref t, pSQL);
+
+            if (atrapa != null)
+            {
+                while (atrapa.Read())
+                {
+                    if ((int)atrapa[0] > 0)
+                    {
+                        status = new string[3];
+                        status[0] = atrapa[0].ToString();
+                        status[1] = atrapa[1].ToString();
+                        status[2] = atrapa[2].ToString();
+                      
+                        m = "Un momento";
+                        t = "Ya estas registrado";
+                        i = "success";
+                    }
+                    else
+                    {
+                        status = null;
+                    }
+                }
+            }
+            cnxTemp.Close();
+            cnxTemp.Dispose();
+            return status;
+        }
+
+        //GRID REPARTIDOR
+        public DataTable PedidosGrid3R(int id, ref string m, ref string i, ref string t)
+        {
+            SqlParameter[] par = new SqlParameter[1];
+            par[0] = new SqlParameter
+            {
+                ParameterName = "idcli",
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Input,
+                Value = id
+            };
+            string query2 = "SELECT id_prod, NombreProd, Peso, Cantidad, NotaEspecial, Nombre as Carnicero FROM Carnicero INNER JOIN Pedido ON Carnicero.id_Carnicero = Pedido.F_Carnicero INNER JOIN Producto ON Pedido.id_Pedido = Producto.F_Pedido WHERE F_Pedido = @idcli";
+            DataSet atrapa = null;
+            DataTable tablaSalida = null;
+
+            atrapa = Objacceso.ConsultaDSP(query2, Objacceso.AbrirConexion(ref m, ref i, ref t), ref m, ref i, ref t, par);
+
+            if (atrapa != null)
+            {
+                tablaSalida = atrapa.Tables[0];
+                if (atrapa.Tables[0].Rows.Count == 0)
+                {
+                    tablaSalida.Rows.Add(tablaSalida.NewRow());
+                }
+
+            }
+            return tablaSalida;
+        }
+
+        public DataTable PedidosespachoRepartidor(ref string m, ref string i, ref string t)
+        {
+            string query2 = "SELECT Nombre, COUNT(id_Pedido) AS Pedidos FROM Repartidor INNER JOIN Pedido ON Pedido.F_Carnicero = Carnicero.id_Carnicero INNER JOIN EntregaPedido ON Pedido.id_Pedido = EntregaPedido.F_Pedido GROUP BY Nombre; ";
+            DataSet atrapa = null;
+            DataTable tablaSalida = null;
+
+            atrapa = Objacceso.ConsultaDaSet(query2, Objacceso.AbrirConexion(ref m, ref i, ref t), ref m, ref i, ref t);
+
+            if (atrapa != null)
+            {
+                tablaSalida = atrapa.Tables[0];
+                if (atrapa.Tables[0].Rows.Count == 0)
+                {
+                    tablaSalida.Rows.Add(tablaSalida.NewRow());
+                }
+
+            }
+            return tablaSalida;
+        }
+
         public List<Cliente> MuestraClientes(ref string m, ref string i, ref string t)
         {
             SqlConnection cnxTemp = null;
@@ -363,7 +495,7 @@ namespace ClassCapaLogicaNegocios
                 Direction = ParameterDirection.Input,
                 Value = nuevo.FPedido
             };
-            string sqlInsert = "INSERT INTO Producto (NombreProd, Cantidad, Peso, NotaEspecial, F_Pedido) VALUES (@nom, @cant,@pes, @not, @idPed);";
+            string sqlInsert = "INSERT INTO Producto (NombreProd, Cantidad, Peso, NotaEspecial, F_Pedido, PrecioFinal) VALUES (@nom, @cant,@pes, @not, @idPed, 15);";
             Boolean salida = false;
             salida = Objacceso.InsertParametros(sqlInsert, Objacceso.AbrirConexion(ref message, ref icon, ref title), ref message, ref icon, ref title, p);
             return salida;

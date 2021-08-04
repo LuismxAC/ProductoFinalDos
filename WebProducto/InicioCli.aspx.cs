@@ -57,6 +57,21 @@ namespace WebProducto
             Response.Redirect("DetallesPed.aspx?query=" + envia);
         }
 
+        protected void DDlCarni_Init(object sender, EventArgs e)
+        {
+            List<Carnicero> atrapa = null;
+            string m = "", i = "", t = "";
+            atrapa = objLog.MuestraCarniceros(ref m, ref i, ref t);
+
+            if (atrapa != null)
+            {
+                DDlCarni.Items.Clear();
+                foreach (Carnicero c in atrapa)
+                {
+                    DDlCarni.Items.Add(new ListItem(c.Nombre, c.id.ToString()));
+                }
+            }
+        }
     }
     
 }

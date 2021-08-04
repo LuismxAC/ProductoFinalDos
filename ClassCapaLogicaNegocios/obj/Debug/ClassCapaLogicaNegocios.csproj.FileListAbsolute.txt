@@ -20,3 +20,14 @@ C:\Users\Leopardo\Desktop\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\Cla
 C:\Users\Leopardo\Desktop\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\ClassCapaLogicaNegocios.csproj.CopyComplete
 C:\Users\Leopardo\Desktop\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\ClassCapaLogicaNegocios.dll
 C:\Users\Leopardo\Desktop\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\ClassCapaLogicaNegocios.pdb
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\bin\Debug\ClassCapaLogicaNegocios.dll
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\bin\Debug\ClassCapaLogicaNegocios.pdb
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\bin\Debug\ClassCapaEntidades.dll
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\bin\Debug\MiAccesoSQL.dll
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\bin\Debug\ClassCapaEntidades.pdb
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\bin\Debug\MiAccesoSQL.pdb
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\ClassCapaLogicaNegocios.csprojAssemblyReference.cache
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\ClassCapaLogicaNegocios.csproj.CoreCompileInputs.cache
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\ClassCapaLogicaNegocios.csproj.CopyComplete
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\ClassCapaLogicaNegocios.dll
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaLogicaNegocios\obj\Debug\ClassCapaLogicaNegocios.pdb

@@ -10,3 +10,9 @@ C:\Users\Leopardo\Desktop\ProductoFinalDos\ClassCapaEntidades\obj\Debug\ClassCap
 C:\Users\Leopardo\Desktop\ProductoFinalDos\ClassCapaEntidades\obj\Debug\ClassCapaEntidades.csproj.CoreCompileInputs.cache
 C:\Users\Leopardo\Desktop\ProductoFinalDos\ClassCapaEntidades\obj\Debug\ClassCapaEntidades.dll
 C:\Users\Leopardo\Desktop\ProductoFinalDos\ClassCapaEntidades\obj\Debug\ClassCapaEntidades.pdb
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaEntidades\bin\Debug\ClassCapaEntidades.dll
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaEntidades\bin\Debug\ClassCapaEntidades.pdb
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaEntidades\obj\Debug\ClassCapaEntidades.csprojAssemblyReference.cache
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaEntidades\obj\Debug\ClassCapaEntidades.csproj.CoreCompileInputs.cache
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaEntidades\obj\Debug\ClassCapaEntidades.dll
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\ClassCapaEntidades\obj\Debug\ClassCapaEntidades.pdb

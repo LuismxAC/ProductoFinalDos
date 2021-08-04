@@ -10,3 +10,9 @@ C:\Users\Leopardo\Desktop\ProductoFinalDos\MiAccesoSQL\obj\Debug\MiAccesoSQL.csp
 C:\Users\Leopardo\Desktop\ProductoFinalDos\MiAccesoSQL\obj\Debug\MiAccesoSQL.csproj.CoreCompileInputs.cache
 C:\Users\Leopardo\Desktop\ProductoFinalDos\MiAccesoSQL\obj\Debug\MiAccesoSQL.dll
 C:\Users\Leopardo\Desktop\ProductoFinalDos\MiAccesoSQL\obj\Debug\MiAccesoSQL.pdb
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\MiAccesoSQL\bin\Debug\MiAccesoSQL.dll
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\MiAccesoSQL\bin\Debug\MiAccesoSQL.pdb
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\MiAccesoSQL\obj\Debug\MiAccesoSQL.csprojAssemblyReference.cache
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\MiAccesoSQL\obj\Debug\MiAccesoSQL.csproj.CoreCompileInputs.cache
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\MiAccesoSQL\obj\Debug\MiAccesoSQL.dll
+C:\Users\Casa\Desktop\REMEDIALES_MEMO\ProductoFinalDos\MiAccesoSQL\obj\Debug\MiAccesoSQL.pdb

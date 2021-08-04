@@ -76,6 +76,7 @@
     <Content Include="InicioCli.aspx" />
     <Content Include="js\main.js" />
     <Content Include="registro-carnicero.aspx" />
+    <Content Include="Repartidor.aspx" />
     <Content Include="VerPedidos.aspx" />
     <Content Include="VerProductos.aspx" />
     <Content Include="Web.config" />
@@ -130,6 +131,13 @@
     </Compile>
     <Compile Include="registro-carnicero.aspx.designer.cs">
       <DependentUpon>registro-carnicero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repartidor.aspx.cs">
+      <DependentUpon>Repartidor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Repartidor.aspx.designer.cs">
+      <DependentUpon>Repartidor.aspx</DependentUpon>
     </Compile>
     <Compile Include="VerPedidos.aspx.cs">
       <DependentUpon>VerPedidos.aspx</DependentUpon>
