@@ -81,6 +81,19 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassCapaEntidades\ClassCapaEntidades.csproj">
+      <Project>{2d5e0468-24dc-49a6-b67f-eb6e114cb2e7}</Project>
+      <Name>ClassCapaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassCapaLogicaNegocios\ClassCapaLogicaNegocios.csproj">
+      <Project>{b807d3b8-1488-405a-98d9-a2592f41b44d}</Project>
+      <Name>ClassCapaLogicaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
